@@ -23,3 +23,5 @@ Containment is defined as **intersection** of the n-gram word count of the Wikip
 
 ![equation](http://www.sciweavers.org/tex2img.php?eq=%20%20%5Cfrac%7B%5Csum%20count%28ngram_A%29%20%5Cbigcap%20count%28ngram_S%29%7D%7B%20%5Csum%20count%28ngram_A%29%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
+
+
