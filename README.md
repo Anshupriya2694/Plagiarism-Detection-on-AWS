@@ -21,5 +21,5 @@ This is the measure of how similar a given answer is as compared to original wik
 
 Containment is defined as **intersection** of the n-gram word count of the Wikipedia Source Text (S) with the n-gram word count of the Student Answer Text (S) divided by the n-gram word count of the Student Answer Text.
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=%20%20%5Cfrac%7B%5Csum%20count%28ngram_A%29%20%5Cbigcap%20count%28ngram_S%29%7D%7B%20%5Csum%20count%28ngram_A%29%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation](Tex2Img_1602260180.jpg)
 
