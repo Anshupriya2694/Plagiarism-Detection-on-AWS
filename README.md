@@ -23,3 +23,6 @@ Containment is defined as **intersection** of the n-gram word count of the Wikip
 
 ![equation](Tex2Img_1602260180.jpg)
 
+If the two texts have no n-grams in common, the containment will be 0, but if all their n-grams intersect then the containment will be 1. Longer the n-grams have in common, more will there be an indication of cut and paste plagiarism.
+
+
