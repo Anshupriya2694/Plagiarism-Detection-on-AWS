@@ -25,4 +25,9 @@ Containment is defined as **intersection** of the n-gram word count of the Wikip
 
 If the two texts have no n-grams in common, the containment will be 0, but if all their n-grams intersect then the containment will be 1. Longer the n-grams have in common, more will there be an indication of cut and paste plagiarism.
 
+#### Longest Common Subsequence
+
+The longest common subsequence is the longest string of words (or letters) that are the same between the Wikipedia Source Text (S) and the Student Answer Text (A). This value is also normalized by dividing by the total number of words (or letters) in the Student Answer Text.
+
+
 
