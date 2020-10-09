@@ -12,3 +12,14 @@ Every text file is associated with one **Task** and one **Category** of plagiari
 4. **non**: An answer is not plagiarized; the Wikipedia source text is not used to create this answer.
 5. **orig**: This is a specific category for the original, Wikipedia source text. We will use these files only for comparison purposes.
 
+
+### Similarity Features
+
+This is the measure of how similar a given answer is as compared to original wikipedia. The similarity features used in this project ar informed by this [paper](https://s3.amazonaws.com/video.udacity-data.com/topher/2019/January/5c412841_developing-a-corpus-of-plagiarised-short-answers/developing-a-corpus-of-plagiarised-short-answers.pdf). 
+
+#### Contaiment 
+
+Containment is defined as **intersection** of the n-gram word count of the Wikipedia Source Text (S) with the n-gram word count of the Student Answer Text (S) divided by the n-gram word count of the Student Answer Text.
+
+![equation](http://www.sciweavers.org/tex2img.php?eq=%20%20%5Cfrac%7B%5Csum%20count%28ngram_A%29%20%5Cbigcap%20count%28ngram_S%29%7D%7B%20%5Csum%20count%28ngram_A%29%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+
