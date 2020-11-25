@@ -1,6 +1,6 @@
 ## Plagiarism-Detection-on-AWS
 
-This project is a part ML Engineer Nanodegree on Udacity. This project aims to build a plagiarism detector for text files. The plagiarism detector will examine atext file and perform binary classification (0 or 1) based on whether or not the text is plagiarized. 
+This project is a part ML Engineer Nanodegree on Udacity. This project aims to build a plagiarism detector for text files. The model will examine a text file and perform binary classification (0 or 1) labeling that file as either plagiarized or not, depending on how similar that text file is to a provided source text.
 
 ### Types of Plagiarism
 
