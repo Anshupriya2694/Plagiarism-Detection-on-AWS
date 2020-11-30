@@ -1,33 +1,33 @@
-## Plagiarism-Detection-on-AWS
+# Plagiarism Project, Machine Learning Deployment
 
-This project is a part ML Engineer Nanodegree on Udacity. This project aims to build a plagiarism detector for text files. The model will examine a text file and perform binary classification (0 or 1) labeling that file as either plagiarized or not, depending on how similar that text file is to a provided source text.
+This repository contains code and associated files for deploying a plagiarism detector using AWS SageMaker.
 
-### Types of Plagiarism
+## Project Overview
 
-Every text file is associated with one **Task** and one **Category** of plagiarism. Tasks refer to the topic on which the paper has been written. The category of plagiarism is as explained below: 
+In this project, you will be tasked with building a plagiarism detector that examines a text file and performs binary classification; labeling that file as either *plagiarized* or *not*, depending on how similar that text file is to a provided source text. Detecting plagiarism is an active area of research; the task is non-trivial and the differences between paraphrased answers and original work are often not so obvious.
 
-1. **cut**: An answer is plagiarized; it is copy-pasted directly from the relevant Wikipedia source text.
-2. **light**: An answer is plagiarized; it is based on the Wikipedia source text and includes some copying and paraphrasing.
-3. **heavy**: An answer is plagiarized; it is based on the Wikipedia source text but expressed using different words and structure. Since this doesn't copy directly from a source text, this will likely be the most challenging kind of plagiarism to detect.
-4. **non**: An answer is not plagiarized; the Wikipedia source text is not used to create this answer.
-5. **orig**: This is a specific category for the original, Wikipedia source text. We will use these files only for comparison purposes.
+This project will be broken down into three main notebooks:
 
+**Notebook 1: Data Exploration**
+* Load in the corpus of plagiarism text data.
+* Explore the existing data features and the data distribution.
+* This first notebook is **not** required in your final project submission.
 
-### Similarity Features
+**Notebook 2: Feature Engineering**
 
-This is the measure of how similar a given answer is as compared to original wikipedia. The similarity features used in this project ar informed by this [paper](https://s3.amazonaws.com/video.udacity-data.com/topher/2019/January/5c412841_developing-a-corpus-of-plagiarised-short-answers/developing-a-corpus-of-plagiarised-short-answers.pdf). 
+* Clean and pre-process the text data.
+* Define features for comparing the similarity of an answer text and a source text, and extract similarity features.
+* Select "good" features, by analyzing the correlations between different features.
+* Create train/test `.csv` files that hold the relevant features and class labels for train/test data points.
 
-#### Contaiment 
+**Notebook 3: Train and Deploy Your Model in SageMaker**
 
-Containment is defined as **intersection** of the n-gram word count of the Wikipedia Source Text (S) with the n-gram word count of the Student Answer Text (S) divided by the n-gram word count of the Student Answer Text.
+* Upload your train/test feature data to S3.
+* Define a binary classification model and a training script.
+* Train your model and deploy it using SageMaker.
+* Evaluate your deployed classifier.
 
-![equation](Tex2Img_1602260180.jpg)
+---
 
-If the two texts have no n-grams in common, the containment will be 0, but if all their n-grams intersect then the containment will be 1. Longer the n-grams have in common, more will there be an indication of cut and paste plagiarism.
-
-#### Longest Common Subsequence
-
-The longest common subsequence is the longest string of words (or letters) that are the same between the Wikipedia Source Text (S) and the Student Answer Text (A). This value is also normalized by dividing by the total number of words (or letters) in the Student Answer Text.
-
-
+Please see the [README](https://github.com/udacity/ML_SageMaker_Studies/tree/master/README.md) in the root directory for instructions on setting up a SageMaker notebook and downloading the project files (as well as the other notebooks).
 
